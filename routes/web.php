@@ -177,4 +177,13 @@ Route::prefix('api')->group(function () {
 use App\Http\Controllers\ArticleController;
 
 Route::get('/articles/{page?}', [ArticleController::class, 'index'])->name('articles');
+##subscription
+use App\Http\Controllers\SubscriptionController;
+Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])->name('subscribe');
+
+##payment
+use App\Http\Controllers\PaymentController;
+
+Route::get('/payment', [PaymentController::class, 'showPaymentPage'])->name('payment.page');
+Route::post('/process-payment', [PaymentController::class, 'processPayment'])->name('process.payment');
 
