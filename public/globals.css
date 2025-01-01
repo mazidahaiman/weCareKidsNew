@@ -1,0 +1,35 @@
+/* globals.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a global font and background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #333; /* Dark text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* General button styles */
+button {
+    cursor: pointer;
+    border: none;
+}
+
+/* Universal link styles */
+a {
+    text-decoration: none;
+    color: #e6604c; /* Coral color */
+}
+
+a:hover {
+    text-decoration: underline;
+}

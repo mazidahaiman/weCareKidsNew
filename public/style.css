@@ -1,0 +1,173 @@
+/* Global Styles for the Page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centered form container */
+.sign-up {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Container for aligning elements in the form */
+.sign-up .div {
+    text-align: center;
+}
+
+/* Header text style */
+.text-wrapper {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style for input fields */
+.textbox, .textbox-2, .textbox-3, .textbox-4 {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.textbox input, .textbox-2 input, .textbox-3 input, .textbox-4 input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+/* Style for password input wrapper */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure the input doesn't overlap with the icon */
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+/* Style for the toggle icon */
+.toggle-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+/* Style for the main signup button */
+.button-4 {
+    background-color: #e6604c; /* Coral color */
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button-4:hover {
+    background-color: #d24a39; /* Darker coral when hovered */
+}
+
+/* Style for terms and conditions */
+p.by-signing-up-i {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Text for the login link */
+p.text-wrapper-10 {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style for the "Log in" link */
+.login-link {
+    color: blue; /* Blue text color */
+    text-decoration: underline; /* Underline the text */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Optional: Add hover effect */
+.login-link:hover {
+    color: darkblue; /* Darker blue on hover */
+}
+
+/* Style for OR separator */
+.text-wrapper-11 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+/* Container for social login buttons */
+.social-buttons {
+    display: flex; /* Use flexbox to align children in a row */
+    justify-content: center; /* Center them horizontally */
+    gap: 10px; /* Add space between the buttons */
+}
+
+/* Adjust social button styles */
+.button, .button-2, .button-3 {
+    width: 50px;
+    height: 50px;
+    background-color: #e6604c; /* Coral color */
+    color: white;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Ensure images fit inside the buttons */
+.button img, .button-2 img, .button-3 img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    object-fit: contain; /* Make sure the aspect ratio is maintained */
+    vertical-align: middle;
+}
+
+/* Checkbox alignment */
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}

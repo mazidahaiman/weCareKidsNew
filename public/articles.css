@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    padding-top: 20px; /* Add padding at the top to create space below the header */
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.article-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-text {
+    padding: 15px;
+}
+
+.article-text h2 {
+    font-size: 18px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.article-text p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.read-more-btn:hover {
+    background-color: #c0392b;
+}
+
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.pagination a {
+    text-decoration: none;
+    color: white;
+    background-color: #e74c3c;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+.pagination a.active {
+    background-color: #c0392b;
+}
+.pagination a:hover {
+    background-color: #f1948a;
+}
+
+page-number {
+    padding: 8px 15px;
+    border: 1px solid #e6604c;
+    background-color: transparent;
+    color: #e6604c;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+

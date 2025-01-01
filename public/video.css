@@ -1,0 +1,38 @@
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.content {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.content h2 {
+    margin-top: 20px;
+}
+
+.content ul, .content ol {
+    padding-left: 20px;
+}
+
+pre {
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
