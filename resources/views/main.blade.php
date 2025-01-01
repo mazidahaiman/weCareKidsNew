@@ -22,7 +22,7 @@
         <nav>
             <ul>
                 <li><a href="{{ route('activities') }}">Activities</a></li>
-                <li><a href="{{ route('forum') }}">Forum</a></li>
+                <li><a href="{{ route('forum.index') }}">Forum</a></li>
                 <li><a href="{{ route('articles') }}">Articles</a></li>
             </ul>
         </nav>
@@ -103,13 +103,13 @@
     <section class="featured-blogs">
         <h2>From Our Blog</h2>
         <div class="blog-card">
-            <img src="{{ asset('img/addiction.jpg') }}" alt="Blog Image">
+            <img src="{{ asset('img/article1.jpg') }}" alt="Blog Image">
             <h3>Avoid Gadjet Addiction In Chidren To Develop Talents And Interests</h3>
             <p>Gadgets are popular in children, it brings both positive and negative impacts for children. </p>
             <a href="{{ route('articles') }}">Read More</a>
         </div>
         <div class="blog-card">
-            <img src="{{ asset('img/supplements.jpg') }}" alt="Blog Image">
+            <img src="{{ asset('img/article5.jpg') }}" alt="Blog Image">
             <h3>Dietary Supplement Intake and Factors Associated</h3>
             <p>The prevalence of dietary supplement intake among children.</p>
             <a href="{{ route('articles') }}">Read More</a>
@@ -122,7 +122,7 @@
         <div class="activities-carousel">
 
         <section class="activities">
-            <h2>Offline Activities Videos</h2>
+            <h2>Exciting DIY Offline Activities for Endless Fun!</h2>
             <p class="activities-subtitle">These simple DIY activities can be done at home or in school.</p>
             <div class="activities-carousel">
 
@@ -133,7 +133,7 @@
                         <h3>Water walking</h3>
                         <p>The colored water "walks" over the bridges and into the clear containers, mixing colors, and showing the magic of capillarity.</p>
                         <button class="btn-learn-more"
-                        onclick="alert('You set up clear containers (e.g., glasses or jars) in a row, alternating between containers filled with colored water and empty ones. Place folded paper towels (or absorbent material) like bridges between the containers. The colored water walks up the paper towel and into the empty container next to it due to capillary action, where water moves through small spaces in the material against gravity. As the water transfers, colors mix in the empty containers, creating a mesmerizing visual display')">
+                        onclick="alert('To watch the video please subscribe to the website. Thank you!')">
                         Learn More</button>
 
                     </div>
@@ -143,7 +143,7 @@
                         <h3>Shaving cream water cycle</h3>
                         <p>Brush up on the water cycle with shaving-cream clouds atop a glass of water.</p>
                         <button class="btn-learn-more"
-                        onclick="alert('Arrange clear glasses in a circle or row, alternating between glasses filled with colored water and empty ones. Place folded paper towels as bridges connecting each glass. Over time, the water walks through the paper towels into the empty glasses, mixing colors and showing capillary action. Observe the water move and discuss the science behind it!')">
+                        onclick="alert('To watch the video please subscribe to the website. Thank you!')">
                         Learn More</button>
 
                     </div>
@@ -153,7 +153,7 @@
                         <h3>Instant Ice</h3>
                         <p>Give your little scientists the powers of Elsa! Water can turn into ice as it’s being poured.</p>
                         <button class="btn-learn-more"
-                        onclick="alert('Chill bottles of purified water in the freezer for about 2–3 hours, just until they are supercooled (cold enough to freeze but still liquid). Gently pour the water onto an ice cube or tap the bottle to trigger instant freezing. The water will turn into ice instantly, creating a fascinating frozen tower or icy slush. Explain how supercooling and nucleation cause the water to freeze rapidly!')">
+                        onclick="alert('To watch the video please subscribe to the website. Thank you!')">
                         Learn More</button>
                     </div>
 
@@ -162,19 +162,42 @@
                         <h3>How to make a kite</h3>
                         <p>Teach you little ones to make their own kites easily</p>
                         <button class="btn-learn-more"
-                        onclick="alert('To make a kite, you need two lightweight sticks, paper or plastic, string, tape or glue, scissors, and a small cloth for the tail. Start by crossing the sticks to form a frame, tying them securely at the intersection. Use string to outline the frame into a diamond or desired shape. Lay the frame on the paper or plastic, cut it slightly larger than the frame, and fold the edges over the string, securing them with tape or glue. Attach a small cloth tail to the bottom for balance.  Finally, tie a flying string to the frames intersection or a bridle, and your kite is ready to fly. Test it in an open space with plenty of wind. ')">
+                        onclick="alert('To watch the video please subscribe to the website. Thank you!')">
                         Learn More</button>
                     </div>
                 </div>
                 </button>
             </div>
         </section>
-
-
-
-
-
     </main>
+
+    <!-- Subscription -->
+    <section class="subscription">
+        <h2>Choose Your Subscription Plan</h2>
+        <div class="subscription-plans">
+            <!-- Monthly Plan -->
+            <div class="plan">
+                <h3>Monthly Plan</h3>
+                <p>RM12 per month</p>
+                <form action="{{ route('subscribe') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="plan" value="monthly">
+                    <a href="{{ route('payment.page') }}?plan=monthly" class="btn btn-primary">Subscribe Montly</a>
+                </form>
+            </div>
+
+            <!-- Yearly Plan -->
+            <div class="plan">
+                <h3>Yearly Plan</h3>
+                <p>RM150 per year</p>
+                <form action="{{ route('subscribe') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="plan" value="yearly">
+                    <a href="{{ route('payment.page') }}?plan=yearly" class="btn btn-primary">Subscribe Yearly</a>
+                </form>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Footer -->
@@ -211,7 +234,7 @@
                     <p>For product announcements and exclusive insights</p>
                     <form>
                         <input type="email" placeholder="Input your email">
-                        <button type="submit">Subscribe</button>
+                        <a href="{{ route('payment.page') }}?plan=yearly" class="btn btn-primary">Subscribe</a>
                     </form>
                 </div>
             </div>
@@ -237,4 +260,6 @@
     </footer>
 </body>
 </html>
+
+
 
